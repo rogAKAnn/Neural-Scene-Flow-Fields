@@ -64,7 +64,7 @@ def _load_data(basedir, start_frame, end_frame,
     
     def imread(f):
         if f.endswith('png'):
-            return imageio.imread(f, ignoregamma=True)
+            return imageio.imread(f, apply_gamma=False)
         else:
             return imageio.imread(f)
         
